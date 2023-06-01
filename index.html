@@ -86,14 +86,46 @@
                 <input style="width: 39%" type="number" name="number" placeholder="Phone Number" required>
             <h2>Courses</h2>
                 <div class="inner">
-                    <output style="background-color: #DCDCDC; width: 9%; font-weight: 900; padding: 5px; margin: 5px;" name="record"> + Add new record</output>
+                    <input style="background-color: #ECECEC; width: 10%; font-weight: 900; padding: 5px; margin:0px 5px; color: #484848;" type="button" name="record" id="addbtn" value=" + Add new record" >
+                    <div>
+                        <select name="Course" id="course" required>
+                            <option value="select">Course   </option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="javascript">JAVASCRIPT</option>
+                        </select>
+                        <select name="Level" id="level" required>
+                            <option value="select">Level   </option>
+                            <option value="html">100</option>
+                            <option value="css">200</option>
+                            <option value="javascript">300</option>
+                        </select>
+                        <select name="Language" id="lang" required>
+                            <option value="select">Language   </option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="javascript">JAVASCRIPT</option>
+                        </select>
+                        <input type="date" name="start" placeholder="Start Date" required>
+                    </div>
                 </div>
-
+                <input style="width: 80%; padding-bottom: 100px;" type="text" name="comment" placeholder="Comments" required>
+                <input style="width: 81%; color: white; background-color: #1482DC" type="submit" name="submit" value="SEND REQUEST">
             </form>
             </div>
         </div>
     </div>
+    <script>
+        const addbtn = document.getElementById('addbtn')
+        const course_ = document.getElementById('course')
+        function func1() {
+            var course = document.createElement('div');
+            course.className = 'course';
+            course.textContent = course_.value;
+        }
+        addbtn.addEventListener('click', func1);
 
+    </script>
 
 </body>
 </html>
