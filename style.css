@@ -1,0 +1,31 @@
+.outer {
+    padding: 20px;
+}
+
+.image{
+    width: 100px;
+    height: 100px;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+}
+
+.textone {
+    margin-top: -90px;
+    margin-left: 150px;
+    padding: 5px;
+}
+
+input {
+    padding: 5px;
+    margin: 10px;
+    width: 25%;
+}
+
+.inner {
+    background-color: #F5F5F5;
+}

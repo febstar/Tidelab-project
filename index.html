@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="./workdone.png">
+<!--    <link rel="stylesheet" href="./style.css">-->
+    <title>Student Registration Form</title>
+    <style>
+        .outer {
+    padding: 20px;
+}
+
+.image{
+    width: 100px;
+    height: 100px;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+}
+
+.textone {
+    margin-top: -90px;
+    margin-left: 150px;
+    padding: 5px;
+}
+
+input {
+    padding: 5px;
+    margin: 10px;
+    width: 25%;
+}
+
+.inner {
+    background-color: #F5F5F5;
+}
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="image">
+           <img src="./workdone.png">
+        </div>
+        <div class="textone">
+            <h1 style="
+            margin-top: 0px;
+            margin-bottom: 0px;
+            ">Student Registration Form</h1>
+            <p style="
+            margin-top: 0px;
+            ">Fill out the form to apply for the training courses. You can consider your application accepted after you receive a confirmation email</p>
+        </div>
+        <div>
+            <h2>Student Information</h2>
+            <div class="form_one">
+            <form action="/url" method="get">
+                <input type="text" name="fname" placeholder="First Name" required>
+                <input type="text" name="mname" placeholder="Middle Name" required>
+                <input type="text" name="lname" placeholder="Last Name" required>
+                <input style="width: 37.5%;" type="date" name="date" placeholder="Date of Birth" required>
+                <input style="width: 40%;" type="text" name="sid" placeholder="Student ID" required>
+            <h2>Address</h2>
+                <input style="width: 80%" type="text" name="street" placeholder="Street Address" required>
+                <input style="width: 38.5%" type="text" name="city" placeholder="City" required>
+                <input style="width: 38.5%" type="text" name="state" placeholder="State / Province" required>
+                <input style="width: 38.5%" type="text" name="country" placeholder="Country" required>
+                <input style="width: 38.5%" type="number" name="zip" placeholder="Zip Code" required>
+            <h2>Contact Information</h2>
+                <input style="width: 39%" type="email" name="email" placeholder="E-Mail" required>
+                <input style="width: 39%" type="number" name="number" placeholder="Phone Number" required>
+            <h2>Courses</h2>
+                <div class="inner">
+                    <output style="background-color: #DCDCDC; width: 9%; font-weight: 900; padding: 5px; margin: 5px;" name="record"> + Add new record</output>
+                </div>
+
+            </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
