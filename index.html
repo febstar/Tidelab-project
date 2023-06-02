@@ -57,6 +57,7 @@
         background-color: #F5F5F5;
         color: #484848;
         width: 10%;
+        padding: 5px;
     }
     #inner1{
         display: flex;
@@ -115,7 +116,7 @@
                     <div class="inner" id="inner1">
 
                     </div>
-                    <div>
+                    <div style="display: flex;">
                         <select style="margin-left: 10px;" name="Course" id="course" required>
                             <option value="select:">Course   </option>
                             <option value="html:">HTML</option>
@@ -134,7 +135,7 @@
                             <option value="Language: css">CSS</option>
                             <option value="Language: javascript">JAVASCRIPT</option>
                         </select>
-                        <input id="start-date" type="date" name="start" placeholder="Start Date" required>
+                        <input style="width: 10%; margin: 0px;" id="start-date" type="date" name="start" placeholder="Start Date" required>
                     </div>
                 </div>
                 <input style="width: 97%; padding-bottom: 100px;" type="text" name="comment" placeholder="Comments" required>
