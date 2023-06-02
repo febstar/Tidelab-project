@@ -58,6 +58,22 @@
         color: #484848;
         width: 10%;
     }
+    #inner1{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 1em 1em 0;
+        padding: 1px;
+    }
+    p {
+        padding: 5px;
+    }
+
+    @media screen and (max-width: 568px) and (min-height: 700px){
+        html {
+            height: -webkit-fill-available;
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -94,28 +110,31 @@
                 <input style="width: 46.5%" type="email" name="email" placeholder="E-Mail" required>
                 <input style="width: 46.5%" type="number" name="number" placeholder="Phone Number" required>
             <h2>Courses</h2>
-                <div class="inner">
-                    <input style="background-color: #ECECEC; width: 20%; font-weight: 900; padding: 5px; margin:0px 5px; color: #484848;" type="button" name="record" id="addbtn" value=" + Add new record " >
+                <div class="inner" id="inner">
+                    <input style="background-color: #ECECEC; width: 20%; font-weight: 900; padding: 5px; margin:0px 5px; color: #484848;" type="button" name="record" id="addbtn" class="addbtn" value=" + Add new record " >
+                    <div class="inner" id="inner1">
+
+                    </div>
                     <div>
                         <select style="margin-left: 10px;" name="Course" id="course" required>
-                            <option value="select">Course   </option>
-                            <option value="html">HTML</option>
-                            <option value="css">CSS</option>
-                            <option value="javascript">JAVASCRIPT</option>
+                            <option value="select:">Course   </option>
+                            <option value="html:">HTML</option>
+                            <option value="css:">CSS</option>
+                            <option value="javascript:">JAVASCRIPT</option>
                         </select>
                         <select name="Level" id="level" required>
-                            <option value="select">Level   </option>
-                            <option value="html">100</option>
-                            <option value="css">200</option>
-                            <option value="javascript">300</option>
+                            <option value="level: select">Level   </option>
+                            <option value="level: 100">100</option>
+                            <option value="level: 200">200</option>
+                            <option value="level: 300">300</option>
                         </select>
                         <select name="Language" id="lang" required>
-                            <option value="select">Language   </option>
-                            <option value="html">HTML</option>
-                            <option value="css">CSS</option>
-                            <option value="javascript">JAVASCRIPT</option>
+                            <option value="Language: select">Language   </option>
+                            <option value="Language: html">HTML</option>
+                            <option value="Language: css">CSS</option>
+                            <option value="Language: javascript">JAVASCRIPT</option>
                         </select>
-                        <input type="date" name="start" placeholder="Start Date" required>
+                        <input id="start-date" type="date" name="start" placeholder="Start Date" required>
                     </div>
                 </div>
                 <input style="width: 97%; padding-bottom: 100px;" type="text" name="comment" placeholder="Comments" required>
@@ -125,14 +144,30 @@
         </div>
     </div>
     <script>
-        const addbtn = document.getElementById('addbtn')
-        const course_ = document.getElementById('course')
-        function func1() {
-            var course = document.createElement('div');
-            course.className = 'course';
-            course.textContent = course_.value;
+        const Btn1 = document.querySelector(".addbtn");
+        const Div1 = document.getElementById("inner1");
+        const Course = document.getElementById("course");
+        const Level = document.getElementById("level");
+        const Lang = document.getElementById("lang");
+        const STdate = document.getElementById("start-date");
+
+        Btn1.addEventListener("click", AddNew);
+
+        function AddNew() {
+            const newcourse = document.createElement("h3");
+            const newlevel = document.createElement("p");
+            const newlang = document.createElement("p");
+            const newdate = document.createElement("p");
+            newdate.innerHTML = STdate.value;
+            newlang.innerHTML = Lang.value;
+            newlevel.innerHTML = Level.value;
+            newcourse.innerHTML = Course.value;
+            console.log("add");
+            Div1.appendChild(newcourse);
+            Div1.appendChild(newlevel);
+            Div1.appendChild(newlang);
+            Div1.appendChild(newdate);
         }
-        addbtn.addEventListener('click', func1);
 
     </script>
 
